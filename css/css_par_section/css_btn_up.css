@@ -1,0 +1,70 @@
+* {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New";
+}
+.btn-up {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    right: 20px; 
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0px 0px 0px 4px #ff4400;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.svgIcon {
+    width: 20px;
+    height: 20px;
+    transition-duration: 0.3s;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.btn-up:hover {
+    width: 140px;
+    border-radius: 50px;
+    background-color: #ff4400;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+.btn-up:hover .svgIcon {
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -250%); 
+    transition-duration: 0.3s;
+}
+
+.btn-up::before {
+    content: "Haut";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0px;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.btn-up:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: 50%; /* Centrage vertical du texte */
+    transform: translate(-50%, 50%); /* Centrage parfait */
+    transition-duration: 0.3s;
+}
