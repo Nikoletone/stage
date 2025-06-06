@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_catalogue.css">
-    <link rel="stylesheet" href="css/css_par_section/footer.css">
-    <link rel="stylesheet" href="css/css_par_section/menu_burger.css">
-    <link rel="stylesheet" href="css/css_par_section/ficher_produit.css">
-    <link rel="stylesheet" href="css/css_par_section/catalogues_card.css">
+    <link rel="stylesheet" href="../css/style_catalogue.css">
+    <link rel="stylesheet" href="../css/css_par_section/footer.css">
+    <link rel="stylesheet" href="../css/css_par_section/menu_burger.css">
+    <link rel="stylesheet" href="../css/css_par_section/ficher_produit.css">
+    <link rel="stylesheet" href="../css/css_par_section/catalogues_card.css">
     <title>Les artisans</title>
 </head>
 <body>
       <header>
             <h1 id="apropos">Les artisans</h1>
             <div id="logo2">
-                <img src="images/images-pages-principales/image_artisans.jpg" alt="">
+                <img src="../images/images-pages-principales/image_artisans.jpg" alt="">
             </div>
              <nav>
                 <div class="links" style="--items: 4">
@@ -35,7 +35,7 @@
                 <div style="display: flex; justify-content: space-around; align-items: center; flex-direction: row; flex-wrap: wrap;">
                     <div class="product-card" >
                         <h3>BFTA (BETHLEEM FAIR TRADE ARTISANS)</h3>
-                        <img src="images/images_artisans/new-logo-20234.jpg" alt="Écharpe palestinienne" class="product-img">
+                        <img src="../images/images_artisans/new-logo-20234.jpg" alt="Écharpe palestinienne" class="product-img">
                         <button type="button" class="button openPopupBtn" id="button_bfta">
                             <span class="button__text">voir plus</span>
                             <span class="button__icon">
@@ -48,7 +48,7 @@
                     </div>
                     <div class="product-card">
                         <h3>Hebron Glass</h3>
-                        <img src="images/images_artisans/hebron-glass-ceramics.jpg" alt="Hebron Glass" class="product-img">
+                        <img src="../images/images_artisans/hebron-glass-ceramics.jpg" alt="Hebron Glass" class="product-img">
                         <button type="button" class="button openPopupBtn" id="button_hebron_glass">
                             <span class="button__text">voir plus</span>
                             <span class="button__icon">
@@ -61,7 +61,7 @@
                     </div>
                     <div class="product-card">
                         <h3>Centre de Broderies de Ramallah</h3>
-                        <img src="images/images_artisans/Centre-pastoral-melkite.jpg" alt="Écharpe palestinienne" class="product-img">
+                        <img src="../images/images_artisans/Centre-pastoral-melkite.jpg" alt="Écharpe palestinienne" class="product-img">
                         <button type="button" class="button openPopupBtn" id="button_broderies">
                             <span class="button__text">voir plus</span>
                             <span class="button__icon">
@@ -107,8 +107,8 @@
      <footer>
         <div id="footer_container">
             <div id="footer_logo">
-                <img src="images\logos\logo-ccfd.png" alt="" class="logo_footer"><br>
-                <img src="images\logos\logo-sqap.png" alt="" id="logo_sgap">
+                <img src="../images/logos/logo-ccfd.png" alt="" class="logo_footer"><br>
+                <img src="../images/logos/logo-sqap.png" alt="" id="logo_sgap">
             </div>
             <div id="footer_text">
                 <p>En partenariat avec <a href="https://ccfd-terresolidaire.org/"><strong>CCFD-Terre Solidaire</strong></a> et <a href="https://sgap38.org/"><strong>sgap38</strong></a></p>
@@ -128,7 +128,7 @@
 </body>
     <script>
     document.getElementById('button_bfta').addEventListener('click', function() {
-    window.location.href = 'les artisans/bfta.html';  // <-- Change ici pour le bon chemin vers la page BFTA
+    window.location.href = 'les artisans/bfta.html';
     });
 
     document.getElementById('button_hebron_glass').addEventListener('click', function(){
