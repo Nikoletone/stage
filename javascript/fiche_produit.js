@@ -15,14 +15,12 @@ openButtons.forEach(button => {
     const productCard = button.closest('.product-card'); // remonte à la div parent
     const name = productCard.dataset.name;
     const price = productCard.dataset.price;
-    const description = productCard.dataset.description;
     const image = productCard.dataset.image;
     const dimensions = productCard.dataset.dimensions;
 
     // Mise à jour du contenu de la popup
     popupTitle.textContent = name;
     popupPrice.textContent = price;
-    popupDescription.textContent = description;
     popupImage.src = image;
     popupDimensions.textContent = dimensions;
 
