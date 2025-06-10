@@ -56,18 +56,22 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   #footer_container {
     flex-direction: column;
     text-align: center;
     gap: 10px;
+   
   }
   #footer_logo {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   #footer_text, #footer_menu {
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 16px;
+  }
+  #footer_menu{
+    display: none; /* Masque le menu sur mobile */
   }
 }
 #footer_text a {
