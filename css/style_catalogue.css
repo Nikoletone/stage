@@ -7,6 +7,11 @@
 
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 #logo2 {
   width: 100%;            /* Prend toute la largeur de l'écran */
   height: 250px;          /* Hauteur fixe */
@@ -112,4 +117,49 @@ aside a:hover::after {
   font-size: 3rem;
   color: #ff4400;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1150px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;  
+    list-style: none;
+  }
+  #main_container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  aside {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border-right: none;
+    border-bottom: 1px solid #ff4400;
+    border-top: 1px solid #ff4400;
+  }
+  aside h2 {
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #ff4400;
+  }
+  aside a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 10px;
+    display: block;
+    margin: 10%;
+    font-weight: bolder;
+  }
+  aside ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
 }

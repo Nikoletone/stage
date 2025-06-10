@@ -1,4 +1,3 @@
-
 /* style pour les produits */
 
 
@@ -118,4 +117,37 @@
   height: px;
   object-fit: contain;
   display: block;
+}
+
+@media (max-width: 1150px) {
+  .button {
+    width: 110px;
+    height: 32px;
+  }
+  .button .button__text {
+    transform: translateX(18px);
+    font-size: 0.5rem;
+  }
+  .button .button__icon {
+    width: 36px;
+    transform: translateX(75px);
+  }
+  .button .svg {
+    width: 22px;
+  }
+  .button:hover .button__icon {
+    width: 108px;
+  }
+}
+
+@media (max-width: 450px) {
+  #productContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .product-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

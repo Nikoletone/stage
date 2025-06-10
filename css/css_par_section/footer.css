@@ -6,68 +6,53 @@ footer {
    position: relative;
    background-color: #f9d8c8;
    color: #ff4400;
-   padding: 50px 30px; 
+   padding: 30px 10px; /* réduit le padding */
    margin-bottom: 0;
    font-family: monospace;
    border-top: 1px solid #ff4400;
    margin-top: 30px;
-   min-height: 200px; 
+   min-height: unset; /* supprime la hauteur minimale */
    bottom: 0;
-    
+   text-align: center; /* centre le texte globalement */
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-left: 0;
+   padding-right: 0;
 }
 
 #footer_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-  margin: auto;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  width: 100%;
+  max-width: 1000px; /* même largeur que le main */
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 20px; /* espace entre les éléments */
 }
 
 #footer_logo {
   flex: 1 1 200px;
   text-align: center;
-  width: 50%;
-  padding-left: 10%;
+  width: auto;
+  padding-left: 0;
 }
 
 #footer_logo img {
-  max-width: 220px;
+  max-width: 180px;
   height: auto;
- 
 }
 
-#footer_text {
-  flex: 2 1 300px;
-  text-align: start;
-  margin-top: 20px;
-  margin-right: 5%;
-  margin-left: 5%;
-  padding-left: 5%;
-  font-size: 18px;
-}
-
-#footer_text p {
+#footer_text, #footer_menu {
+  flex: 1 1 200px;
+  text-align: center;
   margin: 10px 0;
-}
-
-#footer_text a {
-  color: #ff4400;
-  text-decoration: none;
-}
-#footer_menu {
-  flex: 2 1 300px;
-  text-align: start;
-  text-justify: space-between ;
-  margin-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
   font-size: 18px;
-  padding-left: 10%;
-}
-
-#footer_menu a {
-  color: #ff4400;
-  text-decoration: none;
 }
 
 /* Responsive */
@@ -75,17 +60,25 @@ footer {
   #footer_container {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
-
   #footer_logo {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
-
-  #footer_text {
-    flex: unset;
-    margin-top: 15px;
+  #footer_text, #footer_menu {
+    margin-top: 10px;
+    font-size: 16px;
   }
 }
+#footer_text a {
+  color: #ff4400;
+  text-decoration: none;
+}
+#footer_menu a {
+  color: #ff4400;
+  text-decoration: none;
+}
+
 #footer_text a:hover {
   text-decoration: underline;
   color: #ff4400;

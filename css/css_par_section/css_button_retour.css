@@ -64,3 +64,12 @@
   border: 1px solid #fc5214;
 }
 
+
+@media (max-width: 1150px) {
+  .button {
+  
+    right: 90px;
+    bottom: 20px;
+   
+  }
+}

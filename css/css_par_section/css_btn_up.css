@@ -68,3 +68,12 @@
     transform: translate(-50%, 50%); /* Centrage parfait */
     transition-duration: 0.3s;
 }
+
+
+@media (max-width: 1150px) {
+  .btn-up{
+    right: 80px;
+    bottom: 50px;
+   
+  }
+}

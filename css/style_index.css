@@ -86,19 +86,19 @@
 
 /* Responsive du main */
 @media (max-width: 750px) {
-  #date_container img {
-    width: 100%;
-    padding-top: 1%;
-  }
+  html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
   #h1_nom_site{
-   font-size: 20px;
-   margin-top: 3%;
+    font-size: 20px;
+    margin-top: 3%;
   }
   #h2_soustitre{
-   font-size: 15px;
-   margin-top: 5%;
-   margin-bottom: 0;
-   padding-left: 5%;
+    font-size: 15px;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding-left: 5%;
   }
 }
 
