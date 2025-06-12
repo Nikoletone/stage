@@ -1,24 +1,32 @@
+/* ========================================
+   NAVIGATION PRINCIPALE
+   ======================================== */
 nav {
-  width: 100%;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  padding: 1%;
+  width: 100%;              /* Prend toute la largeur */
+  height: auto;             /* Hauteur automatique */
+  background-color: rgb(255, 255, 255);  /* Fond blanc */
+  padding: 1%;             /* Espacement intérieur */
 }
 
+/* ========================================
+   CONTENEUR DES LIENS
+   ======================================== */
 .links {
-  display: grid;
+  display: grid;           /* Disposition en grille */
+  /* Utilise une variable CSS pour définir le nombre de colonnes */
   grid-template-columns: repeat(var(--items), 1fr);
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  position: relative;      /* Pour le positionnement des éléments enfants */
+  align-items: center;     /* Centrage vertical */
+  justify-content: center; /* Centrage horizontal */
+  text-align: center;      /* Alignement du texte */
 }
 
+/* Style des liens de navigation */
 .links > a {
-  margin: 0 10px;
-  position: relative;
-  text-decoration: none;
-  font-size: 20px;
+  margin: 0 10px;         /* Espacement horizontal */
+  position: relative;      /* Pour les effets de survol */
+  text-decoration: none;   /* Supprime le soulignement */
+  font-size: 20px;        /* Taille de police */
   color: #ff4400;
   padding: 10px 0;
 }

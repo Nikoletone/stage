@@ -1,27 +1,32 @@
-/* style pour les produits */
 
-
-
-/* button voir plus */
-/* From Uiverse.io by andrew-demchenk0 */ 
+/* ========================================
+   STYLES DU BOUTON PRINCIPAL
+   ======================================== */
 .button {
+  /* Dimensions et positionnement */
   position: relative;
   width: 150px;
   height: 40px;
-  cursor: pointer;
+  margin: 20px auto;      /* Centrage horizontal avec marge */
+
+  /* Apparence */
+  border: 1px solid #ff4400;    /* Bordure orange */
+  background-color: #ffffff;    /* Fond blanc */
+  border-radius: 5px;           /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Ombre légère */
+  
+  /* Comportement */
+  cursor: pointer;              /* Curseur main au survol */
+  overflow: hidden;             /* Cache les débordements */
+  
+  /* Disposition du contenu */
   display: flex;
-  align-items: center;
-  border: 1px solid #ff4400;
-  background-color: #ffffff;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+  align-items: center;          /* Centrage vertical */
 }
 
-
+/* Animation fluide pour les éléments du bouton */
 .button, .button__icon, .button__text {
-  transition: all 0.3s;
+  transition: all 0.3s;         /* Transition douce */
 }
 
 .button .button__text {

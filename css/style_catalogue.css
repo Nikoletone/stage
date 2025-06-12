@@ -1,17 +1,23 @@
+/* ========================================
+   STYLES GÉNÉRAUX
+   ======================================== */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;             /* Supprime les marges par défaut */
+    padding: 0;            /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur totale */
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;  
-    list-style: none;
-
+    list-style: none;      /* Supprime les puces des listes */
 }
 
+/* Prévention du débordement horizontal */
 html, body {
   width: 100%;
   overflow-x: hidden;
 }
 
+/* ========================================
+   HEADER ET LOGO
+   ======================================== */
 #logo2 {
   width: 100%;            /* Prend toute la largeur de l'écran */
   height: 250px;          /* Hauteur fixe */
@@ -21,18 +27,19 @@ html, body {
   align-items: center;
 }
 
-/* Image du logo */
+/* Optimisation de l'image du logo */
 #logo2 img {
   width: 100%;            /* Remplir la largeur */
   height: 100%;           /* Remplir la hauteur */
   object-fit: cover;      /* Remplissage sans déformation */
-
   /* Optimisation de la netteté */
-  image-rendering: auto;             /* Par défaut : mieux pour les photos */
-  image-rendering: crisp-edges;      /* Parfois utile pour les dessins */
-  image-rendering: -webkit-optimize-contrast;  /* Optimisation spécifique WebKit */
+  image-rendering: auto;             
+  image-rendering: crisp-edges;      
+  image-rendering: -webkit-optimize-contrast;  
   display: block;
 }
+
+/* Style du titre principal */
 #apropos{
     position: absolute;
     height: auto;
@@ -44,33 +51,35 @@ html, body {
     color: #ff4400;
 }
 
-
-
+/* ========================================
+   CONTENEUR PRINCIPAL
+   ======================================== */
 #main_container {
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-
 }
 
+/* ========================================
+   BARRE LATÉRALE
+   ======================================== */
 aside {
   width: 25%;
   height: auto;
   padding: 30px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 5%;
-  /* background-color: #f9d8c8; */
+  margin: 5% 0 0 0;
   border-right: 1px solid #ff4400;
-  
 }
+
+/* Styles des titres de la barre latérale */
 aside h2 {
   font-size: 30px;
   margin-bottom: 20px;
   color: #ff4400;
 }
 
+/* Styles des liens de la barre latérale */
 aside a {
   text-decoration: none;
   color: #000000;
@@ -78,16 +87,11 @@ aside a {
   display: block;
   margin: 15px 0;
   font-weight: bolder;
-}
-
-aside a {
   position: relative;
-  display: inline-block;
-  color: #000000;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
+/* Animation de soulignement au survol */
 aside a::after {
   content: "";
   position: absolute;
@@ -103,14 +107,14 @@ aside a:hover::after {
   width: 100%;
 }
 
-
-/* style pour h1, h2, h3 */
+/* ========================================
+   EN-TÊTE DE SECTION
+   ======================================== */
 #header_container {
   width: 100%;
   text-align: center;
   margin-top: 20px;
   font-size: large;
-  
 }
 
 #header_container h2 {
@@ -119,20 +123,26 @@ aside a:hover::after {
   margin-bottom: 10px;
 }
 
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 @media (max-width: 1150px) {
-  *{
+  /* Reset des styles de base */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;  
-    list-style: none;
   }
+
+  /* Adaptation du conteneur principal */
   #main_container {
     flex-direction: column;
     width: 100%;
     padding: 0;
     margin: 0;
   }
+
+  /* Adaptation de la barre latérale */
   aside {
     width: 100%;
     padding: 10px;
@@ -141,25 +151,25 @@ aside a:hover::after {
     border-bottom: 1px solid #ff4400;
     border-top: 1px solid #ff4400;
   }
+
+  /* Réduction de la taille des textes */
   aside h2 {
     font-size: 10px;
     margin-bottom: 10px;
-    color: #ff4400;
   }
+
   aside a {
-    text-decoration: none;
-    color: #000000;
     font-size: 10px;
-    display: block;
     margin: 10%;
     font-weight: bolder;
   }
-  aside ul{
+
+  /* Réorganisation du menu latéral en ligne */
+  aside ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-
   }
 }

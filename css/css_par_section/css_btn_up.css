@@ -1,22 +1,37 @@
+/* ========================================
+   STYLES GÉNÉRAUX
+   ======================================== */
 * {
+    /* Police de caractères monospace pour une meilleure lisibilité */
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New";
 }
+
+/* ========================================
+   BOUTON DE RETOUR EN HAUT
+   ======================================== */
 .btn-up {
+    /* Dimensions du bouton */
     height: 50px;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 50%;        /* Forme circulaire */
+
+    /* Centrage du contenu */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Positionnement fixe en bas à droite */
     position: fixed; 
     right: 20px; 
     bottom: 20px;
-    cursor: pointer;
-    z-index: 1;
-    background-color: rgb(20, 20, 20);
-    box-shadow: 0px 0px 0px 4px #ff4400;
-    transition-duration: 0.3s;
-    overflow: hidden;
+
+    /* Interaction et apparence */
+    cursor: pointer;           /* Curseur pointeur au survol */
+    z-index: 1;               /* Au-dessus des autres éléments */
+    background-color: rgb(20, 20, 20);  /* Fond sombre */
+    box-shadow: 0px 0px 0px 4px #ff4400;  /* Contour orange */
+    transition-duration: 0.3s;   /* Animation douce */
+    overflow: hidden;            /* Cache les débordements */
 }
 
 .svgIcon {
