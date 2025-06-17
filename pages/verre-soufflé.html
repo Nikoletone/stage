@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/css_par_section/typography.css">
     <link rel="stylesheet" href="../css/style_catalogue.css">
     <link rel="stylesheet" href="../css/css_par_section/footer.css">
     <link rel="stylesheet" href="../css/css_par_section/menu_burger.css">
     <link rel="stylesheet" href="../css/css_par_section/ficher_produit.css">
     <link rel="stylesheet" href="../css/css_par_section/catalogues_card.css">
+    <link rel="stylesheet" href="../css_btn_voir_plus.css">
     <link rel="stylesheet" href="../css/css_par_section/css_btn_up.css">
+    <link rel="stylesheet" href="../css/css_par_section/css.btn_retour_catalogue.css">
     <title>Verre soufflé</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
              <nav>
                 <div class="links" style="--items: 4">
                     <a href="../index.html">Accueil</a>
-                    <a href="apropos.html">A propos</a>
+                    <a href="apropos.html">À propos</a>
                     <a href="les_artisans.html">Les artisans</a>
                     <a href="contact.html">Contact</a>
                     <div class="line"></div>
@@ -246,7 +249,16 @@
                     
                 </div>
             </section>
-        </div> 
+        </div>
+        <button type="button" class="button_catalogues">
+            <span class="button__texte">catalogues</span>
+            <span class="button__icone">
+            <svg width="25px" height="25px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"></path>
+                <path fill="#000000" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"></path>
+            </svg>
+            </span>
+        </button> 
     </main>
      <footer>
         <div id="footer_container">
@@ -255,7 +267,7 @@
                 <img src="../images\logos\logo-sqap.png" alt="" id="logo_sgap">
             </div>
             <div id="footer_text">
-                <p>En partenariat avec <a href="https://ccfd-terresolidaire.org/"><strong>CCFD-Terre Solidaire</strong></a> et <a href="https://sgap38.org/"><strong>sgap38</strong></a></p>
+                <p>En collaboration avec <a href="https://ccfd-terresolidaire.org/"><strong>CCFD-Terre Solidaire</strong></a> et <a href="https://sgap38.org/"><strong>sgap38</strong></a></p>
                 <p>Vente de produits artisanaux palestiniens</p>
                 <p>Contact : <a href="mailto:ccfdts44.artisanatpalestine@gmail.com">ccfdts44.artisanatpalestine@gmail.com</a></p>
             </div>
@@ -264,12 +276,17 @@
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="apropos.html">A propos</a></li>
                     <li><a href="artisant.html">Les artisans</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 </body>
+    <script >
+        document.getElementsByClassName('button_catalogues')[0].addEventListener('click', function(){
+        window.location.href = "catalogue.html";
+        });
+    </script>
     <script src="../js/fiche_produit.js"></script>
     <script src="../js/btn_up.js"></script>
 </html>

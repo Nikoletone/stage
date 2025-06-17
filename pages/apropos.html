@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/css_par_section/typography.css">
+    <link rel="stylesheet" href="../css/css_par_section/menu_burger.css">
     <link rel="stylesheet" href="../css/style_apropos.css">
-    <link rel="stylesheet" href="../css/css_par_section/menu_burger.css    ">
     <link rel="stylesheet" href="../css/css_par_section/footer.css">
-    <title>A propos</title>
+    <link rel="stylesheet" href="../css/css_par_section/css_btn_up.css">
+    <title>À propos</title>
 </head>
 <body>
     <header>
-        <h1 id="apropos">A propos de nous</h1> 
+        <h1 id="apropos">À propos de nous</h1> 
         <div id="logo2">
             <img src="../images\images-pages-principales\image_apropos_contraster.png" alt="">
         </div>
@@ -25,6 +27,13 @@
             </nav>
     </header>
     <main>
+        <div class="btn-up" style="display: none;">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+            ></path>
+        </svg>
+        </div>
         <section>
             <h2>Notre mission</h2><br>
             <div> 
@@ -44,10 +53,16 @@
             Pour cela, l’association développe le réseau de vente en France et favorise la mise en relation avec de nouveaux partenaires en Palestine, grâce à sa connaissance du terrain. Ce travail contribue à la préservation d’un patrimoine artisanal ancien et participe à faire connaître la culture et l’identité du peuple palestinien.
             </p><br>
             <h3>Le <a href="https://ccfd-terresolidaire.org/">CCFD</a> et ses objectifs  </h3><br>
-            <p>Le <a href="https://ccfd-terresolidaire.org/">CCFD-Terre Solidaire</a> est la première ONG française de solidarité internationale. Depuis plus de 60 ans, elle agit aux côtés des populations les plus vulnérables, en particulier contre la faim, considérée comme une injustice majeure freinant l’accès à l’éducation, la santé ou un travail digne.
-            L’association soutient près de 500 partenaires locaux dans 70 pays, en privilégiant l’action sur les causes plutôt que l’urgence. Elle travaille avec les acteurs locaux, sans imposer de solutions, mais en accompagnant leurs projets de développement dans des domaines tels que l’agroécologie, les droits humains ou l’égalité femmes-hommes.
-            En France, plus de 7 000 bénévoles se mobilisent pour sensibiliser les citoyens à la solidarité internationale à travers des ateliers, campagnes et événements. Le CCFD-Terre Solidaire est guidé par des valeurs fortes : solidarité, justice, subsidiarité, et agit dans une démarche d’éthique, de transparence et de respect de la dignité humaine.
-            </p><br>
+            <p>Le <a href="https://ccfd-terresolidaire.org/">CCFD-Terre Solidaire</a> Acteur historique du changement dans près de 70 pays, le CCFD-Terre Solidaire agit contre toutes les formes d’injustices. Nous œuvrons pour que chacun voie ses droits fondamentaux respectés : manger à sa faim, vivre dignement de son travail, habiter dans un environnement sain, choisir là où construire sa vie… Un monde plus juste et plus fraternel est déjà en action, car chacun porte en lui une force de changement.
+            Notre engagement pour plus de justice et de solidarité prend racine dans l’Évangile et la pensée sociale de l’Église. Par notre action individuelle et collective, nous proposons et soutenons des solutions politiques et de terrain.
+            <h3>Leurs trois pilliers</h3>
+            <h4>Soutenir</h4>
+            <p>Des associations partenaires en Palestine et en Israël pour agir sur les causes et les conséquances de l’occupation israélienne.</p>
+            <h4>Sensibiliser</h4>
+            <p>les citoyens francais*es en leur donnant des clés de compréhension sur la situation.
+            </p>
+            <h4>Interpeller</h4>
+            <p>La France et l'Europe, aux côtés des alliés, doivent exiger le respect du droit international.</p>
         </section>
         <section>
             <h2>Nos membres et leurs histoire</h2><br>
@@ -66,7 +81,7 @@
                 <img src="../images\logos\logo-sqap.png" alt="" id="logo_sgap">
             </div>
             <div id="footer_text">
-                <p>En partenariat avec <a href="https://ccfd-terresolidaire.org/"><strong>CCFD-Terre Solidaire</strong></a> et <a href="https://sgap38.org/"><strong>sgap38</strong></a></p>
+                <p>En collaboration avec <a href="https://ccfd-terresolidaire.org/"><strong>CCFD-Terre Solidaire</strong></a> et <a href="https://sgap38.org/"><strong>sgap38</strong></a></p>
                 <p>Vente de produits artisanaux palestiniens</p>
                 <p>Contact : <a href="mailto:ccfdts44.artisanatpalestine@gmail.com">ccfdts44.artisanatpalestine@gmail.com</a></p>
             </div>
@@ -74,12 +89,13 @@
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="apropos.html">A propos</a></li>
-                    <li><a href="artisant.html">Les artisans</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="les_artisans.html">Les artisans</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 </body>
     <script src="../js/javascript_menu_burger.js"></script>
+    <script src="../js/btn_up.js"></script>
 </html>

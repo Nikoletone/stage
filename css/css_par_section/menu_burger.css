@@ -60,3 +60,22 @@ nav {
   font-weight: bolder;
 }
 
+
+@media (max-width: 1150px) {
+  /* Reset des styles de base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .links > a {
+  margin: 0 10px;         /* Espacement horizontal */
+  position: relative;      /* Pour les effets de survol */
+  text-decoration: none;   /* Supprime le soulignement */
+  font-size: 12px;        /* Taille de police */
+  color: #ff4400;
+  padding: 10px 0;
+}
+
+
+}
