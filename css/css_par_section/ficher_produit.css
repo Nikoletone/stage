@@ -21,7 +21,12 @@
   justify-content: center;          /* Centrage horizontal */
   align-items: center;              /* Centrage vertical */
 }
-
+.popup p{
+  font-size: 1.2rem;                /* Taille de police */
+  color: #080808;                   /* Couleur du texte */
+  margin: 2% 0;                   /* Marges verticales */
+  text-align: center;               /* Alignement du texte */
+}
 /* Contenu principal de la popup */
 .popup-content {
   /* Apparence */
@@ -43,6 +48,11 @@
   max-height: 500px;
   object-fit: cover;
   margin: 15px 0;
+  image-rendering: auto;             
+  image-rendering: crisp-edges;      
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: high-quality;/* Peut améliorer le rendu dans certains navigateurs */ 
+  filter: contrast(110%) brightness(105%) saturate(120%);
 }
 
 .product-card h3{
@@ -58,21 +68,27 @@
   height: 400px;
   object-fit: contain;
   display: block;
+  image-rendering: auto;             
+  image-rendering: crisp-edges;      
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: high-quality;/* Peut améliorer le rendu dans certains navigateurs */ 
+  filter: contrast(110%) brightness(105%) saturate(120%);
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 44px;
+  top: 5px;
+  right: 9px;
+  font-size: 190%;
   cursor: pointer;
   color: #080808;
 }
 
 #popupTitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
+
 
 /* Animation d’apparition */
 @keyframes ouverture {

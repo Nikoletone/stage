@@ -35,12 +35,18 @@ html, body {
   /* Optimisation de la netteté */
   image-rendering: auto;             
   image-rendering: crisp-edges;      
-  image-rendering: -webkit-optimize-contrast;  
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: high-quality;/* Peut améliorer le rendu dans certains navigateurs */ 
   display: block;
+  filter: contrast(110%) brightness(105%) saturate(120%);
 }
 
 /* Style du titre principal */
-#apropos{
+header {
+    position: relative;  /* Pour contenir le h1 absolu */
+}
+
+#apropos {
     position: absolute;
     height: auto;
     width: 100%;
@@ -49,6 +55,15 @@ html, body {
     font-size: 4rem;
     font-weight: bold;
     color: #ff4400;
+    z-index: 2; /* Ajout uniquement du z-index pour le rendre visible */
+}
+
+/* Style pour le h1 de la section produits */
+#productSection h1 {
+    font-size: 2.5rem;
+    color: #ff4400;
+    margin: 20px 0;
+    padding-left: 20px;
 }
 
 /* ========================================

@@ -39,6 +39,12 @@ nav, .links > a {
     font-size: 1.2rem;
 }
 
+nav a {
+    /* Ces styles peuvent interférer avec l'animation */
+    font-family: 'EB Garamond', serif;
+    text-decoration: none;
+}
+
 /* Boutons */
 button, .button, .button__text {
     font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;

@@ -21,7 +21,11 @@
   transition: all 0.3s;
 }
 
-.button_catalogues .button__texte {
+.button__texte{
+  text-align: start;
+  padding-left: 8%;
+}
+.button_catalogues {
   transform: translateX(30px);
   color: #ff4400;
   font-weight: 600;

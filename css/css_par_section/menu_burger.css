@@ -3,63 +3,76 @@
    ======================================== */
 nav {
   width: 100%;              /* Prend toute la largeur */
-  height: auto;             /* Hauteur automatique */
-  background-color: rgb(255, 255, 255);  /* Fond blanc */
-  padding: 1%;             /* Espacement intérieur */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: white; /* Pour assurer un fond uniforme */
 }
 
 /* ========================================
    CONTENEUR DES LIENS
    ======================================== */
 .links {
-  display: grid;           /* Disposition en grille */
-  /* Utilise une variable CSS pour définir le nombre de colonnes */
-  grid-template-columns: repeat(var(--items), 1fr);
-  position: relative;      /* Pour le positionnement des éléments enfants */
-  align-items: center;     /* Centrage vertical */
-  justify-content: center; /* Centrage horizontal */
-  text-align: center;      /* Alignement du texte */
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex;
+  justify-content: space-around; /* Répartit les liens sur toute la largeur */
+  padding: 1rem;
+  max-width: 1200px; /* Limite la largeur maximale pour les très grands écrans */
+  margin: 0 auto; /* Centre le contenu */
+  padding-left: 5%; /* Ajoute un peu d'espace à gauche */
+  
 }
 
 /* Style des liens de navigation */
 .links > a {
-  margin: 0 10px;         /* Espacement horizontal */
   position: relative;      /* Pour les effets de survol */
   text-decoration: none;   /* Supprime le soulignement */
-  font-size: 20px;        /* Taille de police */
-  color: #ff4400;
-  padding: 10px 0;
+  color: #000;
+  padding: 0 10px;
+  font-family: 'EB Garamond', serif;
+  transition: color 0.3s ease;
+  font-weight: 600; /* Met le texte en gras */
 }
 
-.links > .line {
-  opacity: 0;
-  transition: all 0.5s;
+/* Animation hover maintenue */
+.links > a::after {
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
-  width: var(--width, calc(100% / var(--items)));
-  --index: 0;
-  height: 3px;
-  background: #ff4400;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff4400;
+  transition: width 0.3s ease-in-out;
 }
 
-.links > a:hover ~ .line {
-  opacity: 1;
-}
-
-/* Animation basée sur l'ordre des liens */
-.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
-.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
-.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
-.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
-
-
-.links a:active{
+.links > a:hover {
   color: #ff4400;
-  text-decoration: none;
-  font-weight: bolder;
 }
 
+.links > a:hover::after {
+  width: 100%;
+}
+
+
+/* Styles pour le positionnement du logo */
+#logo2 {
+  position: relative; /* Pour permettre le positionnement absolu du logo */
+}
+
+#logo {
+  position: absolute;
+  top: 5px;           /* Position légèrement plus haute */
+  left: 5px;          /* Position légèrement plus à gauche */
+  width: 15%;        /* Largeur réduite */
+  height: 15%;       /* Hauteur réduite */
+  z-index: 10;        /* S'assure que le logo est au-dessus de l'image de fond */
+}
+#logo img {
+  width: 100%;        /* Remplit la largeur du conteneur */
+  height: auto;       /* Garde les proportions de l'image */
+  object-fit: cover;  /* Assure que l'image couvre le conteneur sans déformation */
+}
 
 @media (max-width: 1150px) {
   /* Reset des styles de base */

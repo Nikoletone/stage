@@ -37,7 +37,7 @@
             </div>
             <div class="form-content">
                 <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                    <input type="hidden" name="access_key" value="58e7d39e-57a5-42ec-9cae-6c3e4442becd" />
+                    <input type="hidden" name="access_key" value="ea091189-e165-4a96-af80-99fb728adf57" />
                     <input type="hidden" name="subject" value="Nouveau message depuis le formulaire de contact" />
                     <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
@@ -59,7 +59,7 @@
                         </div>
                         <div class="input-field">
                             <label for="phone">Numéro de Téléphone</label>
-                            <input type="tel" name="phone" id="phone" placeholder="06 12 34 56 78" required />
+                            <input type="tel" name="phone" id="phone" placeholder="06 12 34 56 78" />
                         </div>
                     </div>
 
@@ -91,8 +91,9 @@
             <div id="footer_menu">
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
-                    <li><a href="les_artisans.html">Les artisans</a></li>
+                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="artisant.html">Les artisans</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -109,7 +110,7 @@
             const formData = new FormData(form);
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
-            alert("Veuillez patienter...");
+            result.textContent = "Veuillez patienter...";
 
             fetch("https://api.web3forms.com/submit", {
                 method: "POST",
@@ -122,15 +123,15 @@
             .then(async (response) => {
                 const json = await response.json();
                 if (response.status == 200) {
-                    alert("Message envoyé avec succès !");
+                    result.textContent = "Message envoyé avec succès !";
                     result.classList.add("text-success");
                 } else {
-                    alert(json.message || "Une erreur s'est produite");
+                    result.textContent = json.message || "Une erreur s'est produite";
                     result.classList.add("text-error");
                 }
             })
             .catch((error) => {
-                alert("Une erreur s'est produite !");
+                result.textContent = "Une erreur s'est produite !";
                 result.classList.add("text-error");
             })
             .finally(() => {
