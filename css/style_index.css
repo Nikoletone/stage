@@ -7,25 +7,23 @@
   list-style: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
 #logo2 {
-  width: 100%; /* Prend toute la largeur de l'écran */
-  height: 250px; /* Hauteur fixe */
-  overflow: hidden; /* Cache les débordements */
-  display: flex; /* Centre l'image */
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Image du logo */
 #logo2 img {
-  width: 100%; /* Remplir la largeur */
-  height: 100%; /* Remplir la hauteur */
-  object-fit: cover; /* Remplissage sans déformation */
-
-  /* Optimisation de la netteté */
-  image-rendering: auto; /* Par défaut : mieux pour les photos */
-  image-rendering: crisp-edges; /* Parfois utile pour les dessins */
-  image-rendering: -webkit-optimize-contrast; /* Optimisation spécifique WebKit */
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Affichage non zoomé */
   display: block;
 }
 
@@ -37,6 +35,7 @@
   right: 5px;
   font-family: monospace;
 }
+
 #p_artiste {
   color: #030302;
   font-weight: bold;
@@ -45,7 +44,6 @@
   font-family: monospace;
 }
 
-/* style pour le main */
 #h1_nom_site {
   color: #ff4400;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -55,18 +53,26 @@
   margin-top: 3%;
 }
 
-/* ici on stylise le sous titre " nos prochaines ventes*/
-#h2_soustitre {
+.h2_soustitre {
   color: #000000;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
-  text-align: left;
+  text-align: center;
   font-size: 30px;
-  margin-top: 4%;
-  padding-left: 12%;
+  margin: 0%;
+  padding-left: 0;
 }
 
-/* ici on stylise la div qui contient l'image de la date*/
+.h2_soustitre a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.h2_soustitre a:hover {
+  color: #ff4400;
+  transition: color 0.3s ease-in-out;
+}
+
 #date_container {
   display: flex;
   justify-content: center;
@@ -74,7 +80,6 @@
   padding: 20px;
 }
 
-/* ici on stylise l'image de la date*/
 #date_container img {
   width: 100%;
   height: auto;
@@ -82,16 +87,16 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#flyer-container {
+.flyer-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  flex-wrap: nowrap;
   width: 100%;
 }
 
-#flyer1 {
+.flyer1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -103,7 +108,7 @@
   margin-bottom: 7%;
 }
 
-#position {
+.position {
   position: relative;
   width: 50%;
   height: 100%;
@@ -116,6 +121,7 @@
   border-radius: 8px;
   will-change: transform;
 }
+
 /* Responsive du main */
 @media (max-width: 750px) {
   html,

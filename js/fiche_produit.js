@@ -23,20 +23,19 @@ const openButtons = document.querySelectorAll('.openPopupBtn');
  */
 openButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Récupération des données du produit depuis la carte
     const productCard = button.closest('.product-card');
-    const name = productCard.dataset.name;          // Nom du produit
-    const price = productCard.dataset.price;        // Prix du produit
-    const image = productCard.dataset.image;        // URL de l'image
-    const dimensions = productCard.dataset.dimensions; // Dimensions du produit
+    const name = productCard.dataset.name;
+    const price = productCard.dataset.price;
+    const image = productCard.dataset.image;
+    const dimensions = productCard.dataset.dimensions;
+    const references = productCard.dataset.references;  // <-- ajout
 
-    // Mise à jour du contenu de la popup avec les données du produit
     popupTitle.textContent = name;
     popupPrice.textContent = price;
     popupImage.src = image;
     popupDimensions.textContent = dimensions;
+    popupReferences.textContent = references;  // <-- ajout
 
-    // Affichage de la popup
     popup.style.display = 'flex';
   });
 });
